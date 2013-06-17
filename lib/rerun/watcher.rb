@@ -70,7 +70,7 @@ module Rerun
     end
 
     def adapter
-      timeout(4) do
+      timeout(10) do
         sleep 1 until adapter = @listener.instance_variable_get(:@adapter)
         adapter
       end
